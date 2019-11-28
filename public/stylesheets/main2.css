@@ -69,6 +69,7 @@
         line-height: 36px;
         border-bottom: none;
         text-transform: uppercase;
+        padding-bottom: 10px;
     }
 
     h3 {
@@ -87,6 +88,14 @@
     .content {
         float: left;
         width: 60%; /* 480px / 800px */
+    }
+
+    .welcome {
+        text-align: center;
+        padding: 25px;
+        margin: 25px;
+        font-size: 30px;
+        line-height: 1.5;
     }
 
     .sidebar {

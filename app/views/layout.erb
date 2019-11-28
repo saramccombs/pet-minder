@@ -12,18 +12,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main2.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper-parent">
+      <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/users/new">Sign Up</a>
+        <a href="/users/login">Log In</a>
+        <a href="/users/search">Search: Owners</a>
+        <a href="/pets/search">Search: Pets</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="wrapper-child">    
 
         <%= yield %>
 
-      <footer class="branding">
-        <small>&copy; 2019 <strong>PetMinder</strong></small>
-      </footer>
+        <footer class="branding">
+          <small>&copy; 2019 <strong>PetMinder</strong></small>
+        </footer>
+      </div>
     </div>
 
+    <script>
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>
       <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>

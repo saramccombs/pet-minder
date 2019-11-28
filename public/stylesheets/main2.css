@@ -24,16 +24,18 @@
         line-height: 18px;
     }
 
-    .wrapper {
+    .wrapper-parent {
         background: #fff;
         -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
         -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
         box-shadow: 0 0 10px rgba(0,0,0,.3);
         margin: 16px auto;
         max-width: 560px;
-        min-width: 400px;
-        padding: 2.25%; /* 18px / 800px */
+        /* min-width: 400px; */
         width: 35%;
+    }
+    .wrapper-child {
+        padding: 2.25%
     }
 
     h1 {
@@ -46,6 +48,12 @@
 
     h1.new {
         text-align: center;
+    }
+
+    h1.logo {
+        font-size: 55px;
+        text-align: center;
+        /* Font set in .logo-font */
     }
 
     h2 {
@@ -151,7 +159,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .wrapper {
+    .wrapper-parent {
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
         box-shadow: none;

@@ -20,13 +20,13 @@ class UsersController < ApplicationController
     end
     
     get '/users/:id/edit' do
-        @user = Owner.find(params[:id])
+        @user = User.find(params[:id])
         @pets = Pet.all
         erb :'/users/edit'
     end
     
     get '/users/:id' do
-        @user = Owner.find(params[:id])
+        @user = User.find(params[:id])
         erb :'/users/show'
     end
     

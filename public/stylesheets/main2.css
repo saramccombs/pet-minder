@@ -165,6 +165,13 @@
     .logo-font {
         font-family: 'Covered By Your Grace', cursive;
     }
+
+    .user-roster-member {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 20px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {

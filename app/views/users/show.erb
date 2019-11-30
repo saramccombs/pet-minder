@@ -1,0 +1,10 @@
+<div class="container">
+    <% if @user.name.last != "s" %>
+        <% possessive_name = @user.name + "'s">
+    <% else %>
+        <% possessive_name = @user.name %>
+    <% end %>
+    <h1 class="new"><%= possessive_name %><span class="logo-font">PetMinder</span> Account</h1>
+    <br />
+
+</div>

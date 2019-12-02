@@ -1,0 +1,8 @@
+{
+    "name": "PetMinder",
+    "description": "Flatiron School Sinatra Portfolio Project",
+    "authors": "Sara McCombs",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {}
+}

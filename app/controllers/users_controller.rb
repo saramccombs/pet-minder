@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-
+    #View all users
     get '/users' do
         @users = User.all
         erb :'/users/index'
     end
     
-    # Completely new user account
+    # Create new user
     get '/users/new' do
         @pets = Pet.all
         erb :'/users/new'
@@ -18,16 +18,18 @@ class UsersController < ApplicationController
         end
         redirect "/users/#{@user.id}"
     end
+
+    # View one user
+    get '/users/:id' do
+        @user = User.find(params[:id])
+        erb :'/users/show'
+    end
     
+    # Edit existing user
     get '/users/:id/edit' do
         @user = User.find(params[:id])
         @pets = Pet.all
         erb :'/users/edit'
-    end
-    
-    get '/users/:id' do
-        @user = User.find(params[:id])
-        erb :'/users/show'
     end
     
     patch '/users/:id' do
@@ -40,4 +42,6 @@ class UsersController < ApplicationController
         
         redirect "/users/#{@user.id}"
     end
+
+    
 end

@@ -16,5 +16,6 @@ tumblr = Pet.create(
     color: "Tri-Color", 
     food_name: "Royal Canin Large Digestive Care Dry Dog Food",
     feeding_instructions: "Give 1 1/2 cups twice a day, add 1 cup warm water immediately before serving.",
-    medications: "Prednisone (AM - 1/2 pill), Prozac (AM - 1 tablet)"
+    medications: "Prednisone (AM - 1/2 pill), Prozac (AM - 1 tablet)",
+    user_id: 2
 )

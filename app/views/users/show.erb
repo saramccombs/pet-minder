@@ -1,10 +1,32 @@
-<div class="container">
-    <% if @user.name.last != "s" %>
-        <% possessive_name = @user.name + "'s">
-    <% else %>
-        <% possessive_name = @user.name %>
-    <% end %>
-    <h1 class="new"><%= possessive_name %><span class="logo-font">PetMinder</span> Account</h1>
-    <br />
+<% if @user.name.last != "s" %>
+    <% possessive_name = @user.name + "'s" %>
+<% else %>
+    <% possessive_name = @user.name + "'"%>
+<% end %>
 
+<h1 class="new"><%= possessive_name %><span class="logo-font"> PetMinder</span> Account</h1>
+<div class="member-info">
+    <p><%= @user.phone %></p>
+    <p><%= @user.email %></p>
+</div>
+<div class="pet-info">
+    <h3>Pet Information</h3>
+    <% if @user.pets.count == 0 %>
+        <p class="center"><%= @user.name %> has no pets currently.</p>
+        <p class="center">They should go adopt one!</p>
+    <% else %>
+        <ol>
+            <% @user.pets.each do |p|%>
+            <li><span class="pet-info-name"><%= p.name %></span>
+                <ul>
+                    <li><span class="pet-info-label">Breed:</span> <%= p.breed %></li><br />
+                    <li><span class="pet-info-label">Color:</span> <%= p.color %></li><br />
+                    <li><span class="pet-info-label">Feeding Instructions:</span> <%= p.feeding_instructions %></li><br />
+                    <li><span class="pet-info-label">Medications:</span> <%= p.medications %></li><br />
+                </ul>
+            </li>
+            <br />
+            <% end %>
+        </ol>
+    <% end %>
 </div>

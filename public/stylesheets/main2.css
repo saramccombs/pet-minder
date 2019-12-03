@@ -1,9 +1,22 @@
 @media screen {
     /* --- Reset Styles --- */
-    * {
+    /* * {
         list-style: none;
         margin: 0;
         padding: 0;
+    } */
+
+    .attributions {
+        font-size: 9px;
+        color: #999;
+    }
+
+    a:link.attr {
+        color: #999;
+      }
+
+    .center {
+        text-align: center;
     }
 
     html, body {
@@ -35,7 +48,11 @@
         width: 35%;
     }
     .wrapper-child {
-        padding: 2.25%
+        padding: 2.25%;
+    }
+
+    .wrapper-child-child {
+        min-height: 600px;
     }
 
     h1 {
@@ -93,7 +110,9 @@
     .welcome {
         text-align: center;
         padding: 25px;
-        margin: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-bottom: 25px;
         font-size: 30px;
         line-height: 1.5;
     }
@@ -134,7 +153,6 @@
     fieldset {
         padding: 15px;
         background-color: rgba(91,97,138,0.3);
-        backg
         color: #fff;
     }
 
@@ -150,7 +168,7 @@
         border-radius: 4px;
     }
 
-    input[type=reset] {
+    input[type=reset], .pm-button {
         background-color: #695582;
         border: none;
         color: white;
@@ -167,9 +185,31 @@
     }
 
     .user-roster-member {
-        display: inline-block;
-        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
         padding: 20px;
+    }
+
+    .member-info {
+        text-align: center;
+        font-size: 22px;
+        color: #43C6AC;
+    }
+
+    span.pet-info-name {
+        color: #F92A82;
+        font-size: 18px;
+        list-style-type: none;
+    }
+
+    span.pet-info-label {
+        color: #311654;
+    }
+
+    .logo-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }

@@ -17,3 +17,4 @@ A collection of project information that doesn't fit anywhere else in my notes.
 ## Misc
 
 - [Corneal Gem](https://thebrianemory.github.io/corneal/)
+- [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables#)

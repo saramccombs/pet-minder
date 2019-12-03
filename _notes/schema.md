@@ -2,14 +2,14 @@
 
 FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/markdown_tables)
 
-|      USER | SCHEMA                 |
+|   ACCOUNT | SCHEMA                 |
 |----------:|------------------------|
 | t.string  | :username              |
 | t.string  | :password_digest       |
 | t.boolean | :admin, default :false |
 | t.integer | :account_id            |
 
-|  ACCOUNT | SCHEMA |
+|     USER | SCHEMA |
 |---------:|--------|
 | t.string | :name  |
 | t.string | :phone |

@@ -23,9 +23,9 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 | t.string | :feeding_instructions |
 | t.string | :medications          |
 
-| ACCOUNT_PET | SCHEMA      |
+|    USER_PET | SCHEMA      |
 |------------:|-------------|
-| t.integer   | :account_id |
+| t.integer   | :user_id    |
 | t.integer   | :pet_id     |
 
 ## Future Feature Schemas

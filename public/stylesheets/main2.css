@@ -13,7 +13,7 @@
 
     a:link.attr {
         color: #999;
-      }
+    }
 
     .center {
         text-align: center;
@@ -80,12 +80,10 @@
         margin-bottom: 16px;}
 
     h2.legend {
-        /* color: #FFF; */
-        /* color: #F92A82; */
+        color: #F92A82 !important;
         font-size: 24px;
         line-height: 36px;
         border-bottom: none;
-        text-transform: uppercase;
         padding-bottom: 10px;
     }
 
@@ -139,7 +137,7 @@
         padding-top: 20px;
     }
 
-    input[type=text], input[type=tel], input[type=email] {
+    input[type=text], input[type=tel], input[type=email], input[type=password] {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0px;
@@ -153,7 +151,7 @@
     fieldset {
         padding: 15px;
         background-color: rgba(91,97,138,0.3);
-        color: #fff;
+        color: #000;
     }
 
     input[type=submit] {
@@ -184,11 +182,11 @@
         font-family: 'Covered By Your Grace', cursive;
     }
 
-    .user-roster-member {
+    /* .user-roster-member {
         text-align: center;
         justify-content: center;
         padding: 20px;
-    }
+    } */
 
     .member-info {
         text-align: center;
@@ -212,6 +210,25 @@
         margin-right: auto;
     }
 
+    .chip {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+
+    .chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -248,15 +265,13 @@
     }
 
     h2.legend {
-        /* color: #F92A82; */
-        /* color: #fff; */
+        color: #F92A82 !important;
         font-size: 18px;
         line-height: 24px;
         border-bottom: none;
-        text-transform: uppercase;
     }
 
-    input[type=text], input[type=tel], input[type=email] {
+    input[type=text], input[type=tel], input[type=email], input[ype=password] {
         font-size: 16px;
     }
 }

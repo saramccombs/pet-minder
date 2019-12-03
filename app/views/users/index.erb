@@ -5,8 +5,9 @@
     <br />
     
     <% @users.each do |user| %>
-        <div class="user-roster-member">
-            <img src="/images/avatar2.png" alt="Person" width="25" height="25"><a href="/users/<%= user.id %>"><%= user.name %></a>
+        <div class="chip">
+            <img src="/images/avatar2.png" alt="Person" width="96" height="96"><a href="/users/<%= user.id %>"><%= user.name %></a>
         </div>
+        <br />
     <%end%>
 </div>

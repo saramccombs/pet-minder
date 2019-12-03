@@ -23,11 +23,6 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 | t.string | :feeding_instructions |
 | t.string | :medications          |
 
-|    USER_PET | SCHEMA      |
-|------------:|-------------|
-| t.integer   | :user_id    |
-| t.integer   | :pet_id     |
-
 ## Future Feature Schemas
 
 |   ACTIVITY | SCHEMA             |

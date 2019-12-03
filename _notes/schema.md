@@ -15,13 +15,14 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 | t.string | :phone |
 | t.string | :email |
 
-|      PET | SCHEMA                |
-|---------:|-----------------------|
-| t.string | :name                 |
-| t.string | :breed                |
-| t.string | :color                |
-| t.string | :feeding_instructions |
-| t.string | :medications          |
+|      PET  | SCHEMA                |
+|----------:|-----------------------|
+| t.string  | :name                 |
+| t.string  | :breed                |
+| t.string  | :color                |
+| t.string  | :feeding_instructions |
+| t.string  | :medications          |
+| t.integer | :owner_id             |
 
 ## Future Feature Schemas
 

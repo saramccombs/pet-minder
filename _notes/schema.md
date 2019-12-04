@@ -6,7 +6,7 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 |----------:|------------------------|
 | t.string  | :username              |
 | t.string  | :password_digest       |
-| t.boolean | :admin, default :false |
+| t.boolean | :admin, default: false |
 | t.integer | :user_id               |
 
 |     USER | SCHEMA |

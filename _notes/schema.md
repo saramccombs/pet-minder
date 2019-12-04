@@ -20,9 +20,10 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 | t.string  | :name                 |
 | t.string  | :breed                |
 | t.string  | :color                |
+| t.string  | :food_name            |
 | t.string  | :feeding_instructions |
 | t.string  | :medications          |
-| t.integer | :owner_id             |
+| t.integer | :user_id              |
 
 ## Future Feature Schemas
 

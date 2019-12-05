@@ -9,7 +9,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if logged_in?
+      @user = current_user
+      erb :welcome
+    else
+      erb :welcome
+    end
   end
 
   get "/search" do
@@ -45,7 +50,7 @@ class ApplicationController < Sinatra::Base
     # Find the user with this username
     @user = Account.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = user.id
+      session[:user_id] = @user.id
       redirect to "/"
     else
       @errors = ["Invalid username or password"]

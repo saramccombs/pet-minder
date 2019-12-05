@@ -1,7 +1,8 @@
 <div class="container">
     <h1 class="new">Edit your <span class="logo-font">PetMinder</span> Account</h1>
     <br />
-    <form action="/users" method="POST">
+    <form action="/users/<%= @user.id %>" method="POST">
+        <input type="hidden" name="_method" value="PATCH">
         <fieldset>
             <legend><h2 class="legend">User Information</h2></legend>
                 <label for="user[name]">Name: </label><br />
@@ -14,6 +15,6 @@
         </fieldset>
         <br />
         <input type="reset" value="Clear Form">
-        <input type="submit" value="Sign Up">
+        <input type="submit" value="Update Account">
     </form>
 </div>

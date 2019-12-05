@@ -11,10 +11,9 @@ class UsersController < ApplicationController
     end
     
     post '/users' do
-        @user = User.new(params[:user])
+        @user = User.new(user_params)
         if @user.save
-            @account = Account.create(params[:account])
-            @account.user_id = @user.id
+            @account = Account.create(account_params(@user.id))
             redirect to "/users/#{@user.id}"
         else
             @error = ["Signup Failed, please try again."]
@@ -38,9 +37,17 @@ class UsersController < ApplicationController
     patch '/users/:id' do
         @user = User.find(params[:id])
         @user.update(params[:user])
-
-        
         redirect "/users/#{@user.id}"
+    end
+
+    def user_params
+        { name: params[:user][:name], phone: params[:user][:phone], email: params[:user][:email] }
+    end
+
+    def account_params(user_id)
+        account = params[:account]
+        account[:user_id] = user_id
+        account
     end
 
 end

@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="new">Edit your <span class="logo-font">PetMinder</span> Account</h1>
+    <br />
+    <form action="/users" method="POST">
+        <fieldset>
+            <legend><h2 class="legend">User Information</h2></legend>
+                <label for="user[name]">Name: </label><br />
+                <input type="text" name="user[name]" value="<%= @user.name %>"><br />
+                <label for="user[phone]">Telephone Number: </label><br />
+                <input type="tel" name="user[phone]"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="<%= @user.phone %>"><br />
+                <label for="user[email]">Email: </label><br />
+                <input type="email" name="user[email]" value="<%= @user.email %>"><br />
+                <br />
+        </fieldset>
+        <br />
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Sign Up">
+    </form>
+</div>

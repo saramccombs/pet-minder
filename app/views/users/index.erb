@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="new"><span class="logo-font">PetMinder</span> Member Roster</h1>
+    <br />
+    <hr>
+    <br />
+    
+    <% @users.each do |user| %>
+        <div class="chip">
+            <img src="/images/avatar2.png" alt="Person" width="96" height="96"><a href="/users/<%= user.id %>"><%= user.name %></a>
+        </div>
+        <br />
+    <%end%>
+</div>

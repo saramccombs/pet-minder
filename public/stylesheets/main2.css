@@ -1,0 +1,277 @@
+@media screen {
+    /* --- Reset Styles --- */
+    /* * {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    } */
+
+    .attributions {
+        font-size: 9px;
+        color: #999;
+    }
+
+    a:link.attr {
+        color: #999;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        background: #43C6AC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(180deg, #311654, #43C6AC);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(180deg, #311654, #43C6AC);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-attachment: fixed;
+        color: #333;
+        font-family: Sans-Serif;
+        line-height: 18px;
+    }
+
+    .wrapper-parent {
+        background: #fff;
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        margin: 16px auto;
+        max-width: 560px;
+        /* min-width: 400px; */
+        width: 35%;
+    }
+    .wrapper-child {
+        padding: 2.25%;
+    }
+
+    .wrapper-child-child {
+        min-height: 600px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 54px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1.new {
+        text-align: center;
+    }
+
+    h1.logo {
+        font-size: 55px;
+        text-align: center;
+        /* Font set in .logo-font */
+    }
+
+    h2 {
+        border-bottom: 2px solid #ccc;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 16px;}
+
+    h2.legend {
+        color: #F92A82 !important;
+        font-size: 24px;
+        line-height: 36px;
+        border-bottom: none;
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    p {
+        margin-bottom: 18px;
+    }
+
+    .main {
+        overflow: hidden;
+    }
+
+    .content {
+        float: left;
+        width: 60%; /* 480px / 800px */
+    }
+
+    .welcome {
+        text-align: center;
+        padding: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .sidebar {
+        background: #eee;
+        border: 1px solid #ccc;
+        float: right;
+        padding: 2.08333333333%; /* 5px / 240px */
+        width: 30%; /* 240px / 800px */
+    }
+
+    .sidebar ul {
+        font-size: 14px;
+    }
+
+    .branding {
+        clear: both;
+    }
+
+    footer.branding {
+        border-top: 2px solid #ccc;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    input[type=text], input[type=tel], input[type=email], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0px;
+        box-sizing: border-box;
+        border: 2px solid #000;
+        border-radius: 4px;
+        color: #000;
+        font-size:18px;
+    }
+
+    fieldset {
+        padding: 15px;
+        background-color: rgba(91,97,138,0.3);
+        color: #000;
+    }
+
+    input[type=submit] {
+        background-color: #43C6AC;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    input[type=reset], .pm-button {
+        background-color: #695582;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    .logo-font {
+        font-family: 'Covered By Your Grace', cursive;
+    }
+
+    /* .user-roster-member {
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+    } */
+
+    .member-info {
+        text-align: center;
+        font-size: 22px;
+        color: #43C6AC;
+    }
+
+    span.pet-info-name {
+        color: #F92A82;
+        font-size: 18px;
+        list-style-type: none;
+    }
+
+    span.pet-info-label {
+        color: #311654;
+    }
+
+    .logo-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .chip {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+
+    .chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper-parent {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 80%;
+    }
+    
+    .content, .sidebar {
+        float: none;
+        width: 100%;
+    }
+    
+    .sidebar {
+        background: transparent;
+        border: none;
+        border-top: 2px solid #ccc;
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    h2.legend {
+        color: #F92A82 !important;
+        font-size: 18px;
+        line-height: 24px;
+        border-bottom: none;
+    }
+
+    input[type=text], input[type=tel], input[type=email], input[ype=password] {
+        font-size: 16px;
+    }
+}

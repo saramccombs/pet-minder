@@ -16,10 +16,9 @@ class CreateTables < ActiveRecord::Migration
       t.string :email
     end
 
-    create_table :acounts do |t|
+    create_table :accounts do |t|
       t.string :username
       t.string :password_digest
-      t.string :admin, default: false
       t.integer :user_id
     end
   end

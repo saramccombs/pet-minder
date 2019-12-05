@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="new">Create a <span class="logo-font">PetMinder</span> Account</h1>
+    <br />
+    <p class="center">All fields are required to create a PetMinder account. Pets can be added on the user account dashboard.</p> 
+    <form action="/users" method="POST">
+        <fieldset>
+            <legend><h2 class="legend">Tell Us About Yourself</h2></legend>
+                <label for="user[name]">Name: </label><br />
+                <input type="text" name="user[name]" required><br />
+                <label for="user[phone]">Telephone Number: </label><br />
+                <input type="tel" name="user[phone]"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br />
+                <label for="user[email]">Email: </label><br />
+                <input type="email" name="user[email]" required><br />
+                <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend><h2 class="legend">Create a Username and Password</h2></legend>
+                <label for="account[username]">Username: </label><br />
+                <input type="text" name="account[username]" required><br />
+                <label for="account[password]">Password: </label><br />
+                <input type="password" name="account[password]" required><br />
+        </fieldset>
+        <br />
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Sign Up">
+    </form>
+</div>

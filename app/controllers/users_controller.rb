@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     
     post '/users' do
         @user = User.new(user_params)
-        if @user.save
-            @account = Account.create(account_params(@user.id))
+        if @user.save && @account = Account.create(account_params(@user.id))
+            session[:user_id] = @user.id
             redirect to "/users/#{@user.id}"
         else
             @error = ["Signup Failed, please try again."]

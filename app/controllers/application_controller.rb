@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
 
   get '/logout' do
     session.clear
-    redirect '/'
+    erb :logout
   end
 
   post '/login' do

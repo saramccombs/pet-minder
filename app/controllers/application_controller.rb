@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = @user.id
       redirect to "/"
     else
-      @error = "Invalid username or password"
+      @error = ["Invalid username or password"]
       erb :failure
     end
   end

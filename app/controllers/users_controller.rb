@@ -17,7 +17,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect to "/users/#{@user.id}"
         else
-            @error = ["Signup Failed, please try again."]
+            @error = @user.errors.full_messages
             erb :failure
         end
     end

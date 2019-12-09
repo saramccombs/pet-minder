@@ -13,9 +13,16 @@ class UsersController < ApplicationController
     
     post '/users' do
         @user = User.new(user_params)
-        if @user.save && @account = Account.create(account_params(@user.id))
+        if @user.save 
+            @account = Account.new(account_params(@user.id))
+            if @account.save
             session[:user_id] = @user.id
             redirect to "/users/#{@user.id}"
+            else
+                @error = @account.errors.full_messages
+                @user.destroy
+                erb :failure
+            end
         else
             @error = @user.errors.full_messages
             erb :failure

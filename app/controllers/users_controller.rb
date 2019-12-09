@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     #View all users
     get '/users' do
+        redirect_if_not_logged_in
         @users = User.all
         erb :'/users/index'
     end
@@ -23,12 +24,14 @@ class UsersController < ApplicationController
 
     # View one user
     get '/users/:id' do
+        redirect_if_not_logged_in
         @user = User.find(params[:id])
         erb :'/users/show'
     end
     
     # Edit existing user
     get '/users/:id/edit' do
+        redirect_if_not_logged_in
         @user = User.find(params[:id])
         @pets = Pet.all
         erb :'/users/edit'

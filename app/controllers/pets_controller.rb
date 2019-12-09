@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
     # Create new pet
     get '/pets/new' do
+        redirect_if_not_logged_in
         erb :'/pets/new'
     end
     
@@ -15,6 +16,7 @@ class PetsController < ApplicationController
     end
 
     get '/pets/:id/edit' do
+        redirect_if_not_logged_in
         @pet = Pet.find(params[:id])
         erb :'/pets/edit'
     end

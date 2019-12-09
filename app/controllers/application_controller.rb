@@ -18,23 +18,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/search" do
+    redirect_if_not_logged_in
     erb :search
-  end
-
-  helpers do
-    def logged_in?
-      !!session[:user_id]
-    end
-
-    def redirect_if_not_logged_in
-      unless logged_in?
-        redirect '/login'
-      end
-    end
-
-    def current_user
-      User.find(session[:user_id])
-    end
   end
 
   get '/login' do
@@ -58,6 +43,25 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+# HELPER METHODS
+
+  helpers do
+    def logged_in?
+      !!session[:user_id]
+    end
+
+    def redirect_if_not_logged_in
+      unless logged_in?
+        redirect '/login'
+      end
+    end
+
+    def current_user
+      User.find(session[:user_id])
+    end
+  end
+
+  # PRIVATE METHODS
   private
 
   def user_params

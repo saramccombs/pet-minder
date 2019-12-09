@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="new">Add a Pet to Your Account</h1>
+    <br />
+    <p class="center">All fields are required.</p> 
+    <form action="/pets" method="POST">
+        <fieldset>
+            <legend><h2 class="legend">Tell Us About Your Pet</h2></legend>
+
+                <label for="pet[name]">Name: </label><br />
+                <input type="text" name="pet[name]" required><br />
+
+                <label for="pet[breed]">Breed: </label><br />
+                <input type="text" name="pet[breed]" required><br />
+
+                <label for="pet[color]">Color: </label><br />
+                <input type="text" name="pet[color]" required><br />
+                <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend><h2 class="legend">How do you care for your pet?</h2></legend>
+
+                <label for="pet[food_name]">Food Name: </label><br />
+                <input type="text" name="pet[food_name]" required><br />
+                
+                <label for="pet[feeding_instructions]">Feeding Instructions: </label><br />
+                <textarea name="pet[feeding_instructions]" required></textarea><br />
+
+                <label for="pet[medications]">Medications: </label><br />
+                <textarea name="pet[medications]" required></textarea><br />
+        </fieldset>
+        <br />
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Add Pet">
+    </form>
+</div>

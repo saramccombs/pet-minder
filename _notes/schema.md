@@ -6,7 +6,6 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 |----------:|------------------------|
 | t.string  | :username              |
 | t.string  | :password_digest       |
-| t.boolean | :admin, default :false |
 | t.integer | :user_id               |
 
 |     USER | SCHEMA |
@@ -20,9 +19,10 @@ FYI: [Super awesome markdown table generator](https://www.tablesgenerator.com/ma
 | t.string  | :name                 |
 | t.string  | :breed                |
 | t.string  | :color                |
+| t.string  | :food_name            |
 | t.string  | :feeding_instructions |
 | t.string  | :medications          |
-| t.integer | :owner_id             |
+| t.integer | :user_id              |
 
 ## Future Feature Schemas
 

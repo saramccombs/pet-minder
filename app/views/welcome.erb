@@ -7,8 +7,16 @@
     <img class="logo-img" src="/images/pet-hotel.png">
     
     <div class="welcome">
-      <p>Welcome to <span class="logo-font">PetMinder</span>, the app that keeps track of all your pets' care instructions.</p>
-      <p><a class="pm-button" href="/users/new">Sign Up</a> &nbsp <a class="pm-button" href="/users/login">Log In</a>
+    
+      <% if logged_in? %>
+        <p>What would you like to do today?</p>
+          <p><a href="/pets/new">Add a new pet</a></p>
+          <p><a href="/users/<%= @user.id %>">List current pets</a></p>
+          <p><a href="/users/<%= @user.id %>/edit">Edit your account</a></p>
+      <% else %>
+        <p>Welcome to <span class="logo-font">PetMinder</span>, the app that keeps track of all your pets' care instructions.</p>
+        <p><a class="pm-button" href="/users/new">Sign Up</a> &nbsp <a class="pm-button" href="/login">Log In</a>
+      <% end %>
     </div>
   </div>
 </div>

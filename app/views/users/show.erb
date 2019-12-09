@@ -15,18 +15,16 @@
         <p class="center"><%= @user.name %> has no pets currently.</p>
         <p class="center">They should go adopt one!</p>
     <% else %>
-        <ol>
+            <p>To edit a pet, click on their name.</p><br />
             <% @user.pets.each do |p|%>
-            <li><span class="pet-info-name"><%= p.name %></span>
+            <span class="pet-info-name logo-font"><img src="/images/dog-tag.png"><a href="/pets/<%= p.id %>/edit"><%= p.name %></a></span>
                 <ul>
                     <li><span class="pet-info-label">Breed:</span> <%= p.breed %></li><br />
                     <li><span class="pet-info-label">Color:</span> <%= p.color %></li><br />
                     <li><span class="pet-info-label">Feeding Instructions:</span> <%= p.feeding_instructions %></li><br />
                     <li><span class="pet-info-label">Medications:</span> <%= p.medications %></li><br />
                 </ul>
-            </li>
             <br />
             <% end %>
-        </ol>
     <% end %>
 </div>

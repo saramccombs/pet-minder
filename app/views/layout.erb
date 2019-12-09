@@ -20,9 +20,13 @@
     <div class="wrapper-parent">
       <div class="topnav" id="myTopnav">
         <a href="/" class="active">Home</a>
+        <% if !logged_in? %>
         <a href="/users/new">Sign Up</a>
-        <a href="/users/login">Log In</a>
+        <a href="/login">Log In</a>
+        <% else %>
         <a href="/search">Search</a>
+        <a href="/logout">Log Out</a>
+        <% end %>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -36,7 +40,7 @@
         <footer class="branding">
           <small>&copy; 2019 <strong>PetMinder</strong></small>
           <div class="attributions">
-            Icons made by <a class="attr" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a class="attr"href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            Icons made by <a class="attr" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> & <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
           </div>
         </footer>
       </div>

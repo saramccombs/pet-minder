@@ -1,0 +1,37 @@
+<div class="container">
+    <h1 class="new">Edit Your Pet</h1>
+    <br />
+    <p class="center">All fields are required.</p> 
+    <form action="/pets/<%= @pet.id %>" method="POST">
+        <fieldset>
+            <legend><h2 class="legend">Tell Us About Your Pet</h2></legend>
+
+                <label for="pet[name]">Name: </label><br />
+                <input type="text" name="pet[name]" value="<%= @pet.name %>"><br />
+
+                <label for="pet[breed]">Breed: </label><br />
+                <input type="text" name="pet[breed]" value="<%= @pet.breed %>"><br />
+
+                <label for="pet[color]">Color: </label><br />
+                <input type="text" name="pet[color]" value="<%= @pet.color %>"><br />
+                <br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend><h2 class="legend">How do you care for your pet?</h2></legend>
+
+                <label for="pet[food_name]">Food Name: </label><br />
+                <input type="text" name="pet[food_name]" value="<%= @pet.food_name %>"><br />
+                
+                <label for="pet[feeding_instructions]">Feeding Instructions: </label><br />
+                <textarea name="pet[feeding_instructions]"><%= @pet.feeding_instructions %></textarea><br />
+
+                <label for="pet[medications]">Medications: </label><br />
+                <textarea name="pet[medications]"><%= @pet.medications %></textarea><br />
+        </fieldset>
+        <br />
+        <input type="hidden" name="_method" value="PATCH">
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Update Pet">
+    </form>
+</div>

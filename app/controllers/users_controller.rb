@@ -7,16 +7,18 @@ class UsersController < ApplicationController
     
     # Create new user
     get '/users/new' do
-        @pets = Pet.all
         erb :'/users/new'
     end
     
     post '/users' do
-        @user = User.create(params[:user])
-        if !params["pet"]["name"].empty?
-            @user.pets << Pet.create(name: params["pet"]["name"])
+        @user = User.new(user_params)
+        if @user.save && @account = Account.create(account_params(@user.id))
+            session[:user_id] = @user.id
+            redirect to "/users/#{@user.id}"
+        else
+            @error = ["Signup Failed, please try again."]
+            erb :failure
         end
-        redirect "/users/#{@user.id}"
     end
 
     # View one user
@@ -33,15 +35,19 @@ class UsersController < ApplicationController
     end
     
     patch '/users/:id' do
-        @user = Owner.find(params[:id])
+        @user = User.find(params[:id])
         @user.update(params[:user])
-        
-        if !params["pet"]["name"].empty?
-            @user.pets << Pet.create(name: params["pet"]["name"])
-        end
-        
         redirect "/users/#{@user.id}"
     end
 
-    
+    def user_params
+        { name: params[:user][:name], phone: params[:user][:phone], email: params[:user][:email] }
+    end
+
+    def account_params(user_id)
+        account = params[:account]
+        account[:user_id] = user_id
+        account
+    end
+
 end

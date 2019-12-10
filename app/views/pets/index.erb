@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="new"><span class="logo-font">PetMinder</span> Pet Roster</h1>
+    <br />
+    <hr>
+    <br />
+    
+    <% @pets.each do |pet| %>
+        <div class="chip">
+            <img src="/images/dog-tag.png" alt="Dog Tag" width="96" height="96"><a href="/pets/<%= pet.id %>"><%= pet.name %></a>
+        </div>
+        <br />
+    <%end%>
+</div>

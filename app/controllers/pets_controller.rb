@@ -1,4 +1,9 @@
 class PetsController < ApplicationController
+    get '/pets' do
+        @pets = Pet.all
+        erb :'/pets/index'
+    end
+    
     # Create new pet
     get '/pets/new' do
         redirect_if_not_logged_in
@@ -24,6 +29,12 @@ class PetsController < ApplicationController
         else
             redirect to "/users"
         end
+    end
+
+    get '/pets/:id' do
+        @pet = Pet.find(params[:id])
+        @user = User.find(@pet.user_id)
+        erb :'/pets/show'
     end
 
     patch '/pets/:id' do

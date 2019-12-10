@@ -1,0 +1,18 @@
+<% if @pet.name.last != "s" %>
+    <% possessive_name = @pet.name + "'s" %>
+<% else %>
+    <% possessive_name = @pet.name + "'"%>
+<% end %>
+
+<h1 class="new"><%= possessive_name %><span class="logo-font"> PetMinder</span> Information</h1>
+<div class="member-info">
+    <p>Owner: <a href="/users/<%= @pet.user_id %>"><%= @user.name %></a></p>
+</div>
+<div class="pet-info">
+    <ul>
+        <li><span class="pet-info-label">Breed:</span> <%= @pet.breed %></li><br />
+        <li><span class="pet-info-label">Color:</span> <%= @pet.color %></li><br />
+        <li><span class="pet-info-label">Feeding Instructions:</span> <%= @pet.feeding_instructions %></li><br />
+        <li><span class="pet-info-label">Medications:</span> <%= @pet.medications %></li><br />
+    </ul>
+</div>

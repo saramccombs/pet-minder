@@ -17,7 +17,8 @@ class PetsController < ApplicationController
 
     get '/pets/:id/edit' do
         redirect_if_not_logged_in
-        if @user.find(params[:id]) == current_user.id
+        @pet = Pet.find(params[:id])
+        if @pet.user_id == current_user.id
             @pet = Pet.find(params[:id])
             erb :'/pets/edit'
         else

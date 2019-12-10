@@ -15,9 +15,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save 
             @account = Account.new(account_params(@user.id))
+            @account.id = @user.id
             if @account.save
-            session[:user_id] = @user.id
-            redirect to "/users/#{@user.id}"
+                session[:user_id] = @user.id
+                redirect to "/users/#{@user.id}"
             else
                 @error = @account.errors.full_messages
                 @user.destroy
@@ -41,7 +42,11 @@ class UsersController < ApplicationController
         redirect_if_not_logged_in
         @user = User.find(params[:id])
         @pets = Pet.all
-        erb :'/users/edit'
+        if @user == current_user.id
+            erb :'/users/edit'
+        else
+            redirect to "/users"
+        end
     end
     
     patch '/users/:id' do

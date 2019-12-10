@@ -17,8 +17,12 @@ class PetsController < ApplicationController
 
     get '/pets/:id/edit' do
         redirect_if_not_logged_in
-        @pet = Pet.find(params[:id])
-        erb :'/pets/edit'
+        if @user.find(params[:id]) == current_user.id
+            @pet = Pet.find(params[:id])
+            erb :'/pets/edit'
+        else
+            redirect to "/users"
+        end
     end
 
     patch '/pets/:id' do
@@ -30,26 +34,6 @@ class PetsController < ApplicationController
             erb :failure
         end
     end
-
-    # # View one user
-    # get '/users/:id' do
-    #     @user = User.find(params[:id])
-    #     erb :'/users/show'
-    # end
-    
-    # # Edit existing user
-    # get '/users/:id/edit' do
-    #     @user = User.find(params[:id])
-    #     @pets = Pet.all
-    #     erb :'/users/edit'
-    # end
-    
-    # patch '/users/:id' do
-    #     @user = User.find(params[:id])
-    #     @user.update(params[:user])
-    #     redirect "/users/#{@user.id}"
-    # end
-
 
     def pet_params(user_id)
         pet = params[:pet]

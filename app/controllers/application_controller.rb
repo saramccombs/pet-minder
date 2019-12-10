@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
     # Find the user with this username
     @user = Account.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
+      session[:user_id] = @user.user_id
       redirect to "/"
     else
       @error = ["Invalid username or password"]

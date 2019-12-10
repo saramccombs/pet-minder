@@ -18,7 +18,7 @@ class UsersController < ApplicationController
             @account.id = @user.id
             if @account.save
                 session[:user_id] = @user.id
-                redirect to "/users/#{@user.id}"
+                redirect to "/"
             else
                 @error = @account.errors.full_messages
                 @user.destroy

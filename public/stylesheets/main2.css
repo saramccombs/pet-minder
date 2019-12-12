@@ -148,6 +148,44 @@
         font-size:18px;
     }
 
+    .switch { 
+        position : relative ;
+        display : inline-block;
+        width : 40px;
+        height : 20px;
+        background-color: rgba(91,97,138,0.3);
+        border-radius: 20px;
+    }
+
+    /* This adds the toggle circle */
+    .switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+    }
+
+    .checkbox:checked + .switch::after {
+        left : 20px; 
+    }
+    
+    .checkbox:checked + .switch {
+    background-color: #7983ff;
+    }
+
+    .checkbox { 
+        display : none;
+    }
+
+    .toggle-label {
+        font-size: 20px;
+    }
+
     fieldset {
         padding: 15px;
         background-color: rgba(91,97,138,0.3);
@@ -162,7 +200,7 @@
         text-decoration: none;
         margin: 4px 2px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 4px;
     }
 
@@ -174,7 +212,7 @@
         text-decoration: none;
         margin: 4px 2px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 4px;
     }
 

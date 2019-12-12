@@ -42,11 +42,8 @@ class UsersController < ApplicationController
         redirect_if_not_logged_in
         @user = User.find(params[:id])
         @pets = Pet.all
-        if @user == current_user.id
-            erb :'/users/edit'
-        else
-            redirect to "/users"
-        end
+        redirect_if_cannot_edit(@user.id)
+        erb :'/users/edit'
     end
     
     patch '/users/:id' do

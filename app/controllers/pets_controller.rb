@@ -23,12 +23,8 @@ class PetsController < ApplicationController
     get '/pets/:id/edit' do
         redirect_if_not_logged_in
         @pet = Pet.find(params[:id])
-        if @pet.user_id == current_user.id
-            @pet = Pet.find(params[:id])
-            erb :'/pets/edit'
-        else
-            redirect to "/users"
-        end
+        redirect_if_cannot_edit(@pet.user_id)
+        erb :'/pets/edit'
     end
 
     delete '/pets/:id' do
@@ -40,6 +36,7 @@ class PetsController < ApplicationController
     end
 
     get '/pets/:id' do
+        redirect_if_not_logged_in
         @pet = Pet.find(params[:id])
         @user = User.find(@pet.user_id)
         erb :'/pets/show'

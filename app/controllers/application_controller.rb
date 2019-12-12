@@ -56,6 +56,12 @@ class ApplicationController < Sinatra::Base
       end
     end
 
+    def redirect_if_cannot_edit(model_id)
+      unless model_id == current_user.id
+        redirect to "/users"
+      end
+    end
+
     def current_user
       User.find(session[:user_id])
     end

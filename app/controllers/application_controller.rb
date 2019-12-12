@@ -1,10 +1,12 @@
 require './config/environment'
+require 'rack-flash'
 
 class ApplicationController < Sinatra::Base
 
   configure do
     set :views, 'app/views'
     enable :sessions
+    use Rack::Flash, :sweep => true
     set :session_secret, "password_security"
   end
 
@@ -52,12 +54,16 @@ class ApplicationController < Sinatra::Base
 
     def redirect_if_not_logged_in
       unless logged_in?
-        redirect '/login'
+        flash[:notice] = "Please login to continue."
+        flash[:notice]
+        redirect to '/login'
       end
     end
 
     def redirect_if_cannot_edit(model_id)
       unless model_id == current_user.id
+        flash[:notice] = "Permission Denied."
+        flash[:notice]
         redirect to "/users"
       end
     end

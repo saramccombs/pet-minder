@@ -31,7 +31,6 @@ class PetsController < ApplicationController
         @pet = Pet.find(params[:id])
         @user = @pet.user_id
         @pet.destroy
-
         redirect to "/users/#{@user}"
     end
 

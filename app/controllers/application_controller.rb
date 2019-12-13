@@ -49,6 +49,7 @@ class ApplicationController < Sinatra::Base
   # Appears that Postgres has some functionality for this but I will
   # wait to implement until depolyment occurs since I want to maintain
   # a SQLite version in master. 
+  #
   # post '/results' do
   #   if params[:search] == "pet"
   #     @results = Pet.where('name LIKE ?', params[:name])

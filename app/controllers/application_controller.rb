@@ -45,6 +45,26 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  # Leaving this in here. Attempts to create a search feature.
+  # Appears that Postgres has some functionality for this but I will
+  # wait to implement until depolyment occurs since I want to maintain
+  # a SQLite version in master. 
+  #
+  # post '/results' do
+  #   if params[:search] == "pet"
+  #     @results = Pet.where('name LIKE ?', params[:name])
+  #     binding.pry
+  #     erb :results
+  #   elsif params[:search] == "owner"
+  #     @results = User.where('name LIKE ?', params[:name])
+  #     binding.pry
+  #     erb :results
+  #   else
+  #     @error = ["Invalid search, please try again."]
+  #     erb :failure
+  #   end
+  # end
+
 # HELPER METHODS
 
   helpers do

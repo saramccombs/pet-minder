@@ -1,6 +1,12 @@
 class PetsController < ApplicationController
+    get '/pets' do
+        @pets = Pet.all
+        erb :'/pets/index'
+    end
+    
     # Create new pet
     get '/pets/new' do
+        redirect_if_not_logged_in
         erb :'/pets/new'
     end
     
@@ -15,8 +21,24 @@ class PetsController < ApplicationController
     end
 
     get '/pets/:id/edit' do
+        redirect_if_not_logged_in
         @pet = Pet.find(params[:id])
+        redirect_if_cannot_edit(@pet.user_id)
         erb :'/pets/edit'
+    end
+
+    delete '/pets/:id' do
+        @pet = Pet.find(params[:id])
+        @user = @pet.user_id
+        @pet.destroy
+        redirect to "/users/#{@user}"
+    end
+
+    get '/pets/:id' do
+        redirect_if_not_logged_in
+        @pet = Pet.find(params[:id])
+        @user = User.find(@pet.user_id)
+        erb :'/pets/show'
     end
 
     patch '/pets/:id' do
@@ -28,26 +50,6 @@ class PetsController < ApplicationController
             erb :failure
         end
     end
-
-    # # View one user
-    # get '/users/:id' do
-    #     @user = User.find(params[:id])
-    #     erb :'/users/show'
-    # end
-    
-    # # Edit existing user
-    # get '/users/:id/edit' do
-    #     @user = User.find(params[:id])
-    #     @pets = Pet.all
-    #     erb :'/users/edit'
-    # end
-    
-    # patch '/users/:id' do
-    #     @user = User.find(params[:id])
-    #     @user.update(params[:user])
-    #     redirect "/users/#{@user.id}"
-    # end
-
 
     def pet_params(user_id)
         pet = params[:pet]

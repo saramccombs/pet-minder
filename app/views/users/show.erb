@@ -15,7 +15,7 @@
         <p class="center"><%= @user.name %> has no pets currently.</p>
         <p class="center">They should go adopt one!</p>
     <% else %>
-            <p>To edit a pet, click on their name.</p><br />
+            <h5 class="center">To edit a pet, click on their name.</h5>
             <% @user.pets.each do |p|%>
             <span class="pet-info-name logo-font"><img src="/images/dog-tag.png"><a href="/pets/<%= p.id %>/edit"><%= p.name %></a></span>
                 <ul>

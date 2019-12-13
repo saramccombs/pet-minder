@@ -2,9 +2,25 @@
 <img class="logo-img" src="/images/pet-hotel.png">
 <div class="center">
     <br /><br />
-    <p>Search by name: </p>
-    <br />
-    <p>Browse:</p>
+
+    <form action="/results" method="POST">
+        <fieldset>
+        <legend><h2 class="legend">Search by Name: </h2></legend>
+            <p>
+                <input type="radio" id="toggle1" class="checkbox" name="search-type" value="pet" />
+                <label for="toggle1" class="switch"></label><span class="toggle-label"> Pet</span><br />
+
+                <input type="radio" id="toggle2" class="checkbox" name="search-type" value="owner" />
+                <label for="toggle2" class="switch"></label><span class="toggle-label"> Owner</span><br />
+            </p>
+            <input type="text" name="name" placeholder="Enter a Name">
+            <input type="submit" value="Search">
+        </fieldset>
+    </form>
+
+<fieldset>
+    <legend><h2 class="legend">Browse by List:</h2></legend>
     <p><a class="pm-button" href="/users">All Pet Owners</a></p>
     <p><a class="pm-button" href="/pets">All Pets</a></p>
+</fieldset>
 </div>

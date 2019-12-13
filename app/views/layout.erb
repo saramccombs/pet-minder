@@ -18,6 +18,9 @@
   </head>
   <body>
     <div class="wrapper-parent">
+    <% if flash[:notice] %>
+        <div class="flash-alerts"><%= flash[:notice] %></div>
+    <% end %>
       <div class="topnav" id="myTopnav">
         <a href="/" class="active">Home</a>
         <% if !logged_in? %>

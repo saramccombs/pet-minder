@@ -34,4 +34,8 @@
         <input type="reset" value="Clear Form">
         <input type="submit" value="Update Pet">
     </form>
+    <form action="/pets/<%= @pet.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete Pet!!">
+    </form>
 </div>

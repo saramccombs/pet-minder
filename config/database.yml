@@ -1,0 +1,15 @@
+development:
+    adapter: postgresql
+    database: petminder
+    pool: 5
+    host: localhost
+    timeout: 5000
+  
+production:
+  adapter: postgresql
+  database: petminder_pro
+  pool: 5
+  timeout: 5000
+
+default: &default
+  host: localhost

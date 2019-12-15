@@ -1,3 +1,4 @@
+require 'rack-flash'
 class UsersController < ApplicationController
     #View all users
     get '/users' do
@@ -50,6 +51,11 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @user.update(params[:user])
         redirect "/users/#{@user.id}"
+    end
+
+    delete '/users/:id' do
+        delete_account(params[:id])
+        redirect to "/delete"
     end
 
     def user_params

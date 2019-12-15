@@ -23,13 +23,13 @@ The Heroku branch has a Postgres database and can be viewed live at [https://pet
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/saramccombs/pet-minder/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/saramccombs/pet-minder/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
 * Sara McCombs - [Portfolio](https://theSaraMcCombs.com)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/saramccombs/pet-minder/contributors) who participated in this project.
 
 ## License
 

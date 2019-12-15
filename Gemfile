@@ -12,7 +12,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'rack-flash3'
 gem 'rack'
-gem 'pg'
+gem 'pg', '~> 0.21.0'
 
 
 group :test do

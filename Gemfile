@@ -11,7 +11,11 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'rack-flash3'
-gem 'pg'
+gem 'rack'
+
+group :production do
+  gem 'pg'
+end
 
 group :test do
   gem 'rspec'

@@ -119,6 +119,7 @@ DEPENDENCIES
   database_cleaner!
   pg
   pry
+  rack
   rack-flash3
   rack-test
   rake

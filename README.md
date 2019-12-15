@@ -30,7 +30,7 @@ Should you wish to deploy this, please fork and clone the Heroku branch.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/saramccombs/pet-minder/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/saramccombs/pet-minder/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
 ## Authors
 
@@ -44,8 +44,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-These are websites, people, organizations, anything or anyone that assited me with this project. This list is not 100% inclusive and will be updated as time allows. 
+These are websites, people, organizations, anything or anyone that assited with this project. This list is not 100% inclusive and will be updated as time allows. 
 
-* Flatiron School
-* W3C School - So many tutorials and explanations.
+* [Flatiron School](https://flatironschool.com/)
+* [W3School](https://www.w3schools.com/)
+* [Corneal Gem](https://thebrianemory.github.io/corneal/)
 * 

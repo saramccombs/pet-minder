@@ -12,10 +12,8 @@ gem 'bcrypt'
 gem 'tux'
 gem 'rack-flash3'
 gem 'rack'
+gem 'pg'
 
-group :production do
-  gem 'pg'
-end
 
 group :test do
   gem 'rspec'

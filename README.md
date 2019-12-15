@@ -4,6 +4,10 @@ PetMinder is a program that allows you to keep track of your pet's care instruct
 
 These care instructions are visible to other members and are useful in situations where a family member or pet sitter needs to care for your pets.
 
+## Demo Video
+
+Coming Soon! 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system such as Heroku.

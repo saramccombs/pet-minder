@@ -45,6 +45,14 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  get '/delete' do
+    redirect_if_not_logged_in
+    flash[:notice] = "You have successfully deleted your account."
+    flash[:notice]
+    session.clear
+    erb :delete
+  end 
+
   # Leaving this in here. Attempts to create a search feature.
   # Appears that Postgres has some functionality for this but I will
   # wait to implement until depolyment occurs since I want to maintain
@@ -90,6 +98,16 @@ class ApplicationController < Sinatra::Base
 
     def current_user
       User.find(session[:user_id])
+    end
+
+    def delete_account(id)
+      @user = User.find(id)
+      @account = Account.find_by(user_id: id)
+      @pets = Pet.where(user_id: id)
+      @pets.each {|pet| pet.destroy }
+      @user.destroy
+      @account.destroy
+      # session cleared upon redirect to the delete erb to persist flash message confirmation of account deletion.
     end
   end
 

@@ -24,10 +24,10 @@
                 <input type="text" name="pet[food_name]" value="<%= @pet.food_name %>"><br />
                 
                 <label for="pet[feeding_instructions]">Feeding Instructions: </label><br />
-                <textarea name="pet[feeding_instructions]"><%= @pet.feeding_instructions %></textarea><br />
+                <textarea id="styled" name="pet[feeding_instructions]"><%= @pet.feeding_instructions %></textarea><br />
 
                 <label for="pet[medications]">Medications: </label><br />
-                <textarea name="pet[medications]"><%= @pet.medications %></textarea><br />
+                <textarea id="styled" name="pet[medications]"><%= @pet.medications %></textarea><br />
         </fieldset>
         <br />
         <input type="hidden" name="_method" value="PATCH">

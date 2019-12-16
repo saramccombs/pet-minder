@@ -32,6 +32,8 @@
                 </ul>
                 <h2></h2>
             <% end %>
+            <% if current_user == @user %>
             <h3 class="center"><a href="/pets/new">Need to Add a New Pet?</a></h3>
+            <% end %>
     <% end %>
 </div>

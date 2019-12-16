@@ -1,12 +1,14 @@
 # PetMinder
 
+![Screenshot of the PetMinder app](./public/PM-Crop.png)
+
 PetMinder is a program that allows you to keep track of your pet's care instructions.
 
 These care instructions are visible to other members and are useful in situations where a family member or pet sitter needs to care for your pets.
 
 ## Demo Video
 
-Coming Soon! 
+Coming Soon!
 
 ## Getting Started
 

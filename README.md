@@ -8,7 +8,7 @@ These care instructions are visible to other members and are useful in situation
 
 ## Demo Video
 
-Coming Soon!
+[Video Walkthrough](https://youtu.be/YE3qW-N64cU)
 
 ## Getting Started
 

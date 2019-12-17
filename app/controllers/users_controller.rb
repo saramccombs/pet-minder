@@ -34,8 +34,13 @@ class UsersController < ApplicationController
     # View one user
     get '/users/:id' do
         redirect_if_not_logged_in
-        @user = User.find(params[:id])
-        erb :'/users/show'
+        @user = User.find_by(id: params[:id])
+        if @user
+            erb :'/users/show'
+        else
+            @error = ["User not found."]
+            erb :failure
+        end
     end
     
     # Edit existing user

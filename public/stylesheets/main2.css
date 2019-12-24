@@ -273,6 +273,18 @@
         background: linear-gradient(45deg, #FF4B2B, #FF416C);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
+
+    .feedback-button {
+        background-color: #43C6AC;
+        border: none;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
 }
 
 @media screen and (max-width: 600px) {

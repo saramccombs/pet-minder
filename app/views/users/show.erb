@@ -15,7 +15,9 @@
         <p class="center"><%= @user.name %> has no pets currently.</p>
         <p class="center">They should go adopt one!</p>
         <br />
+        <% if current_user == @user %>
         <h3 class="center"><a href="/pets/new">Add a New Pet</a></h3>
+        <% end %>
     <% else %>
         <% if current_user == @user %>
             <h4 class="center">To edit a pet, click on their name.</h4>

@@ -7,29 +7,29 @@ class UsersController < ApplicationController
         erb :'/users/index'
     end
     
-    # Create new user
-    get '/users/new' do
-        erb :'/users/new'
-    end
+    # # Create new user
+    # get '/users/new' do
+    #     erb :'/users/new'
+    # end
     
-    post '/users' do
-        @user = User.new(user_params)
-        if @user.save 
-            @account = Account.new(account_params(@user.id))
-            @account.id = @user.id
-            if @account.save
-                session[:user_id] = @user.id
-                redirect to "/"
-            else
-                @error = @account.errors.full_messages
-                @user.destroy
-                erb :failure
-            end
-        else
-            @error = @user.errors.full_messages
-            erb :failure
-        end
-    end
+    # post '/users' do
+    #     @user = User.new(user_params)
+    #     if @user.save 
+    #         @account = Account.new(account_params(@user.id))
+    #         @account.id = @user.id
+    #         if @account.save
+    #             session[:user_id] = @user.id
+    #             redirect to "/"
+    #         else
+    #             @error = @account.errors.full_messages
+    #             @user.destroy
+    #             erb :failure
+    #         end
+    #     else
+    #         @error = @user.errors.full_messages
+    #         erb :failure
+    #     end
+    # end
 
     # View one user
     get '/users/:id' do

@@ -30,6 +30,8 @@ The Heroku branch has a Postgres database and can be viewed live at [https://pet
 
 Should you wish to deploy this, please fork and clone the Heroku branch.
 
+Note: the demo Heroku web app is deployed using the 'heroku-demo` branch, specifically.
+
 ## Built With
 
 - [Corneal Gem](https://thebrianemory.github.io/corneal/)
